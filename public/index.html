@@ -8,6 +8,9 @@
 </head>
 <body>
     <div class="login-container">
+        <div class="logo-container">
+            <img src="img/tu-logo.png" alt="TU-Logo">
+        </div>
         <h1>Login</h1>
         <form id="loginForm">
             <label for="username">Username:</label>
@@ -15,10 +18,21 @@
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
             <button type="button" onclick="submitLogin()">Login</button>
-            <button type="button" onclick="call_REST_API_Hello()">Hello</button>
         </form>
         <p id="message"></p>
     </div>
+
+    <!-- Popup for showing user information -->
+    <div id="loginPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <div id="popupMessage"></div>
+            <button class="popup-button" onclick="closePopup()">Close</button>
+        </div>
+    </div>
+
     <script src="js/script.js"></script>
 </body>
+
 </html>
+
